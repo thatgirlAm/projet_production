@@ -12,7 +12,6 @@ margin:auto;
 .box_email{
     padding: 5%;
     width: 33%;
-    text-align: center;
     margin:auto;
 }
 
@@ -32,14 +31,11 @@ margin:auto;
     margin: auto;
 }
 
-#label_email{
-
-}
-*
-{
-    font-family: "Reem Kufi";
-}
 .bouton_validation{
     margin: auto;
-    
+    padding: 5%;
+}
+
+.label_email, .label_mdp{
+    text-align: center;
 }
