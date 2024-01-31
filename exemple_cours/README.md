@@ -1,5 +1,3 @@
-# projet_production
-
 # Example of a login page
 
 This example demonstrates how to create a login page with PHP and MySQL.
