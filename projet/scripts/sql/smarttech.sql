@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 31 jan. 2024 à 07:46
+-- Généré le : mer. 07 fév. 2024 à 11:06
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -24,118 +24,127 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `critéres`
+-- Structure de la table `critere`
 --
 
-DROP TABLE IF EXISTS `critéres`;
-CREATE TABLE IF NOT EXISTS `critéres` (
+DROP TABLE IF EXISTS `critere`;
+CREATE TABLE IF NOT EXISTS `critere` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Enoncé` text NOT NULL,
-  `Id_produit` int(11) NOT NULL,
+  `enonce` text NOT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `critéres`
+-- Déchargement des données de la table `critere`
 --
 
-INSERT INTO `critéres` (`Id`, `Enoncé`, `Id_produit`) VALUES
-(1, 'Poids inférieur à 200g', 1),
-(2, 'Déformation < 1%', 1);
+INSERT INTO `critere` (`Id`, `enonce`) VALUES
+(1, 'Poids inférieur à 200g'),
+(2, 'Déformation < 1%');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `employés`
+-- Structure de la table `employe`
 --
 
-DROP TABLE IF EXISTS `employés`;
-CREATE TABLE IF NOT EXISTS `employés` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Id_service` int(11) NOT NULL,
+DROP TABLE IF EXISTS `employe`;
+CREATE TABLE IF NOT EXISTS `employe` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_service` int(11) NOT NULL,
   `nom` text NOT NULL,
   `adresse_mail` text NOT NULL,
-  `Mdp` text NOT NULL,
-  PRIMARY KEY (`Id`)
+  `mdp` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `employés`
+-- Déchargement des données de la table `employe`
 --
 
-INSERT INTO `employés` (`Id`, `Id_service`, `nom`, `adresse_mail`, `Mdp`) VALUES
+INSERT INTO `employe` (`id`, `id_service`, `nom`, `adresse_mail`, `mdp`) VALUES
 (1, 1, 'Troufi', 'troufi@gmail.com', 'AAHJ1/'),
 (2, 2, 'Diop', 'diop@gmail.com', 'DDFT3.');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `opération conformité-compte_rendu`
+-- Structure de la table `operation`
 --
 
-DROP TABLE IF EXISTS `opération conformité-compte_rendu`;
-CREATE TABLE IF NOT EXISTS `opération conformité-compte_rendu` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `operation`;
+CREATE TABLE IF NOT EXISTS `operation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
-  `Id_opérateur` int(11) NOT NULL,
-  `Id_critéres_ok` int(11) NOT NULL,
-  `Id_produit` int(11) NOT NULL,
-  `Id_critéres_rejetés` int(11) NOT NULL,
-  `Id_compte_rendu` int(11) NOT NULL,
+  `id_operateur` int(11) NOT NULL,
+  `id_critere_ok` int(11) NOT NULL,
+  `id_produit` int(11) NOT NULL,
+  `id_critere_rejete` int(11) NOT NULL,
+  `id_compte_rendu` int(11) NOT NULL,
   `statut` text NOT NULL,
   `commentaire` text NOT NULL,
-  PRIMARY KEY (`Id`)
+  `id_manager` int(11) NOT NULL,
+  `validation_manageur` tinyint(1) NOT NULL,
+  `validation_operateur` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `opération conformité-compte_rendu`
+-- Déchargement des données de la table `operation`
 --
 
-INSERT INTO `opération conformité-compte_rendu` (`Id`, `date`, `Id_opérateur`, `Id_critéres_ok`, `Id_produit`, `Id_critéres_rejetés`, `Id_compte_rendu`, `statut`, `commentaire`) VALUES
-(1, '2024-01-30 11:52:00', 1, 1, 1, 1, 1, 'Validé', 'Parfait'),
-(2, '2024-01-30 11:54:00', 2, 2, 2, 2, 2, 'Non-validé', 'critére de poids non validé');
+INSERT INTO `operation` (`id`, `date`, `id_operateur`, `id_critere_ok`, `id_produit`, `id_critere_rejete`, `id_compte_rendu`, `statut`, `commentaire`, `id_manager`, `validation_manageur`, `validation_operateur`) VALUES
+(1, '2024-01-30 11:52:00', 1, 1, 1, 1, 1, 'Validé', 'Parfait', 0, 0, 0),
+(2, '2024-01-30 11:54:00', 2, 2, 2, 2, 2, 'Non-validé', 'critére de poids non validé', 0, 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `produits`
+-- Structure de la table `produit`
 --
 
-DROP TABLE IF EXISTS `produits`;
-CREATE TABLE IF NOT EXISTS `produits` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Nom` text NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `produit`;
+CREATE TABLE IF NOT EXISTS `produit` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) DEFAULT NULL,
+  `etat` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=571 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `produits`
+-- Déchargement des données de la table `produit`
 --
 
-INSERT INTO `produits` (`Id`, `Nom`) VALUES
-(1, 'Telephone'),
-(2, 'Tablettes');
+INSERT INTO `produit` (`id`, `type`, `etat`) VALUES
+(140, 'telephone', 1),
+(145, 'telephone', 0),
+(146, 'telephone', 0),
+(142, 'telephone', 1),
+(560, 'tablette', 1),
+(566, 'tablette', 1),
+(570, 'tablette', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `produit_critére`
+-- Structure de la table `produit_critere`
 --
 
-DROP TABLE IF EXISTS `produit_critére`;
-CREATE TABLE IF NOT EXISTS `produit_critére` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Id_produit` int(11) NOT NULL,
-  PRIMARY KEY (`Id`)
+DROP TABLE IF EXISTS `produit_critere`;
+CREATE TABLE IF NOT EXISTS `produit_critere` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_produit` int(11) NOT NULL,
+  `id_critere` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `produit_critére`
+-- Déchargement des données de la table `produit_critere`
 --
 
-INSERT INTO `produit_critére` (`Id`, `Id_produit`) VALUES
-(1, 1),
-(2, 2);
+INSERT INTO `produit_critere` (`id`, `id_produit`, `id_critere`) VALUES
+(1, 1, NULL),
+(2, 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -145,16 +154,16 @@ INSERT INTO `produit_critére` (`Id`, `Id_produit`) VALUES
 
 DROP TABLE IF EXISTS `service`;
 CREATE TABLE IF NOT EXISTS `service` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom_service` text NOT NULL,
-  PRIMARY KEY (`Id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `service`
 --
 
-INSERT INTO `service` (`Id`, `nom_service`) VALUES
+INSERT INTO `service` (`id`, `nom`) VALUES
 (1, 'Production'),
 (2, 'Management');
 COMMIT;
