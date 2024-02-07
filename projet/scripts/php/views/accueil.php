@@ -54,7 +54,7 @@
         </ul>
     </div>
     <div class="content">
-        <img src="path_to_your_logo.png" alt="Smart Tech Logo">
+        <img src="http://smarttech/projet/images/logo.jpeg" alt="Smart Tech">
         <h1>Contrôle qualité des produits</h1>
        <!-- <img src="path_to_your_tablet_image.png" alt="Tablet">
         <img src="path_to_your_device_image.png" alt="Device">
