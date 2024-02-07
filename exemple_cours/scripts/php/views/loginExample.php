@@ -34,7 +34,7 @@
             }
         ?>
 
-        <form method="post" action="index.php">
+        <form method="post" action="loginController.php">
             <fieldset>
                 <legend>Login</legend>
                 <input type="text" placeholder="login" id="login" name="login">
@@ -47,3 +47,5 @@
 
     </body>
 </html>
+
+<!--Test-->
