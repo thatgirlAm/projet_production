@@ -40,3 +40,4 @@
     
     $result = $userModel->check_login($login, $password);
     print_r($result);
+?>
