@@ -15,7 +15,7 @@ class dbmodel {
     private function connect_to_db() {   // fonction qui permet à Db de ce connecter, si la connexion a bien été établie, on return TRUE 
         require_once __DIR__. "/../env_settings.php";     
         try {
-            $this->db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $user, $pwd, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+            $this->db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $login, $mot_de_passe, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
             return true;
         }
         catch (Exception $e) {

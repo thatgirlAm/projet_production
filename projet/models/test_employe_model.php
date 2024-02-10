@@ -4,24 +4,24 @@
 
     $employemodel = new employemodel();
 
-    // teste avec login et mdp correctes
-    $nom = "troufi";
-    $mdp = "AAHJ1/";
+    // test avec login et mdp correctes
+    $login = "troufi";
+    $mot_de_passe = "AAHJ1/";
     
-    $result = $employemodel->check_employe($login, $mdp);
+    $result = $employemodel->check_employe($login, $mot_de_passe);
     print_r($result);
 
-    // teste avec login incorrect
-    $nom = "tr0ufi";
-    $mdp = "AAHJ1/";
+    // test avec login incorrect
+    $login= "tr0ufi";
+    $mot_de_passe = "AAHJ1/";
     
-    $result = $employemodel->check_employe($login, $mdp);
+    $result = $employemodel->check_employe($login, $mot_de_passe);
     print_r($result);
 
-    // teste avec mot de passe incorrect
-    $nom = "troufi";
-    $mdp = "123";
+    // test avec mot de passe incorrect
+    $login = "troufi";
+    $mot_de_passe = "123";
     
-    $result = $employemodel->check_employe($login, $mdp);
+    $result = $employemodel->check_employe($login, $mot_de_passe);
     print_r($result);
 ?>
