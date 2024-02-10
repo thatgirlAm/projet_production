@@ -2,10 +2,14 @@
 
 //Début du code corrigé par chatgpt
 function include_header(){
-    echo "<h1>Bienvenue</h1>" . htmlspecialchars($_POST['nom'], ENT_QUOTES, 'UTF-8');
+    ?>
+    <header>
+        <h1>Page de connexion</h1>
+    </header>
+    <?php
 }
 
-//Fin de correction
+
 function include_footer() {
     ?>
     <footer>
@@ -13,4 +17,9 @@ function include_footer() {
     </footer>
     <?php
 }
+ function include_error_message($message) {
+        echo "<p class='error_message'>" . $message . "</p>";
+    }
+
+
 ?>

@@ -12,7 +12,7 @@ class DBModel{
         require_once __DIR__."../../env_settings.php";
         
         try {
-            $this->db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $user, $pwd, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+            $this->db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $addresse_mail, $mdp, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
             return true;
     }
     catch(Exception $e){
