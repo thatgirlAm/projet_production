@@ -10,8 +10,8 @@ $pwd = "";
 if (file_exists("/var/www/")) {
     $host = "localhost";
     $dbname = "smarttech";
-    $login = "nom";
-    $mot_de_passe = "Mdp";
+    $user = "nom";
+    $pwd = "mdp";
 }
 
 ?>

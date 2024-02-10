@@ -10,18 +10,18 @@ class employemodel extends dbModel {
         if (!$this->connected) {
             return $result;
         }
-        $request = "SELECT * FROM employes WHERE login:nom AND mot_de_passe = MD5(:Mdp)";
+        $request = "SELECT * FROM employe WHERE login =:nom AND mot_de_passe = MD5(:mdp)";
         $statement = $this->db->prepare($request);
 
         $statement->execute([
             "nom" => $login,
-            "Mdp" => $mot_de_passe
+            "mdp" => $mot_de_passe
         ]);
 
         $entries = $statement->fetchAll();
         if (count($entries) == 1) {
             $result["adresse_mail"] = $entries[0]['adresse_mail'];
-            $result["Id_service"] = $entries[0]['Id_service'];
+            $result["id_service"] = $entries[0]['id_service'];
         }
         return $result;
     }

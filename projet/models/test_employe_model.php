@@ -1,6 +1,6 @@
 <?php
 
-    require_once(__DIR__."/scripts/php/models/employemodel.php");
+    require_once(__DIR__."/employemodel.php");
 
     $employemodel = new employemodel();
 
