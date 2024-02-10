@@ -1,5 +1,5 @@
 <?php
-
+//--ok--//
 require_once("DBModel.php");
 class Usermodel extends DBModel{
 

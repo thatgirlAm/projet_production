@@ -1,5 +1,5 @@
 <?php
-
+//--ok--//
 class DBModel{
     protected $db = null;
     protected $connected = false;
