@@ -17,16 +17,9 @@
     echo $message_accueil;?>
     
      <!--Choix production ou conformité-->
-   
     <?php  
-    $model = new ListeProduits;
-    $output.='<ul>'
-    // la variable $model doit être remplacée par le model, à voir après
-    foreach($model->getProduits() as Produit){
-        $output .= '<li>'. $produit['id'].$produit['nom'].$produit['etat'].'</li>';
-    }
-    $output.='</ul>'
-    return $output;
+    
+    
     ?>
   
 
