@@ -7,6 +7,7 @@ class ProduitModel extends DBModel {
         $request = 'SELECT * FROM produit' ;
         $statement = $this->db->prepare($request);
         $statement->execute();
-        return $statement->fetchAll();
+        $liste = $statement->fetchAll();
+        return $liste;
     }
     }

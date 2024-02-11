@@ -13,14 +13,27 @@
     <?php include_header(); ?>
     
     <?php 
+    $message_accueil = "Rien";
     //--Bienvenue $user--//
-    echo $message_accueil;?>
+    echo $message_accueil;
+
+    if (is_array($liste)  && !empty($liste)) {
+        echo "<ul>";
+        foreach ($liste as $produit) {
+            echo "<li>" . $produit . "</li>";
+        }
+        echo "</ul>";   
+    } 
+    else {
+            echo "Aucun produit en stock"; // In case $liste is empty or not an array
+        }
+    ?>
     
-     <!--Choix production ou conformité-->
+    <!--Choix production ou conformité-->
     <?php  
     
     
-    ?>
+    ?> 
   
 
 
