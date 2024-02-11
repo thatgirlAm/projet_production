@@ -1,21 +1,37 @@
-<?php
+<?php 
 
-require_once(__DIR__.'../models/DBModel.php')
-'''class ModelProduit extends DBModel{
-   function choix (string $choix){
-        $choix = 0 ; 
+require_once(__DIR__."./DBModel.php");
 
+class ListeProduits {
+    private $sort="oldest";
+    public function  __construct($sort="oldest") {
+    $this->sort=$sort;  
     }
-    $request = "SELECT * FROM produit WHERE produit.type=:choix.type"
+
+    public function sort($dir): self {
+        return new self($dir);
+    }
+
+    public function getSort(): string {
+        return $this->sort;
+    }
+
+    public function getProduits(): array {
+        if ($this->sort== "newest"){
+            $order = 'ORDER BY id DESC'
+        }
+
+        else if  ($this->sort == "oldest"){
+            $order = 'ORDER BY id ASC';
+        }
+
+        else{
+            $order = '';
+        }
+    $request = 'SELECT * FROM produit '. $where. $order;
     $statement = $this->db->prepare($request);
-    $statement->execute()
+    $statement->execute();
 
-    protected $produit;
-
-    public function setProduit($produit){
-        $this->produit = $produit;
+    return $statement->fetchAll();
     }
-    public function __construct($produit) {
-        $this->setProduit($produit);'''
-
-
+    }
