@@ -10,7 +10,7 @@ $pwd = "";
 if (file_exists("/var/www/")) {
     $host = "localhost";
     $dbname = "the-db-name";
-    $addresse_mail = "the_email";
-    $mdp = "the_pwd";
+    $user = "the_user";
+    $pwd = "the_pwd";
 }
 

@@ -4,7 +4,7 @@
 function include_header(){
     ?>
     <header>
-        <h1>Page de connexion</h1>
+        <img src="projet_production\smarttech\images\logo.jpeg" alt="logo">
     </header>
     <?php
 }

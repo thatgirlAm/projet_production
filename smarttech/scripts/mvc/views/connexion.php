@@ -19,8 +19,8 @@
         <form method="post" action="loginController.php">
             <fieldset>
                 <legend>Se connecter</legend>
-                <input type="text" placeholder="Addresse Mail" id="login" name="login">
-                <input type="password" placeholder='Mot de Passe' id='pwd' name="pwd">
+                <input type="text" placeholder="Addresse Mail" id="addresse_mail" name="addresse_mail">
+                <input type="password" placeholder='Mot de Passe' id='mdp' name="mdp">
                 <button type="submit">Submit</button>
             </fieldset>
         </form>

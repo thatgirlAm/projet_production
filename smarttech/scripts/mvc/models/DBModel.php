@@ -5,14 +5,14 @@ class DBModel{
     protected $connected = false;
 
     public function __construct(){
-        $this->conntected = $this->connect_to_db();
+        $this->connected = $this->connect_to_db();
 }
 
     private function connect_to_db(){
-        require_once __DIR__."../../env_settings.php";
+        require_once (__DIR__."/private/env_settings.php");
         
         try {
-            $this->db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $addresse_mail, $mdp, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+            $this->db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $user, $pwd, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
             return true;
     }
     catch(Exception $e){
