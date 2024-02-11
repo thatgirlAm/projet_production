@@ -18,7 +18,7 @@ class ListeProduits {
 
     public function getProduits(): array {
         if ($this->sort== "newest"){
-            $order = 'ORDER BY id DESC'
+            $order = 'ORDER BY id DESC';
         }
 
         else if  ($this->sort == "oldest"){
@@ -28,7 +28,7 @@ class ListeProduits {
         else{
             $order = '';
         }
-    $request = 'SELECT * FROM produit '. $where. $order;
+    $request = 'SELECT * FROM produit '.$order;
     $statement = $this->db->prepare($request);
     $statement->execute();
 
