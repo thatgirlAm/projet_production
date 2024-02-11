@@ -22,6 +22,6 @@
     $addresse_mail= "troufi@gmail.com";
     $mdp = "123";
     
-    $result = $usemodel->check_login($addresse_mail, $mdp);
+    $result = $usermodel->check_login($addresse_mail, $mdp);
     print_r($result);
 ?>
