@@ -11,6 +11,7 @@ if(isset($_POST['addresse_mail']) && isset($_POST["mdp"])){
         if(isset($result['addresse_mail'])){
             session_start();
             $_SESSION['addresse_mail'] = $result['addresse_mail'];
+            $_SESSION['nom'] = $result['nom'];
         }
         else{
             $msg_erreur = "mot de passe ou adresse mail invalide. Réessayer.";
@@ -29,8 +30,16 @@ if(isset($_POST['logout'])){
 require_once(__DIR__.'/../views/includes.php');
 
 if(isset($_SESSION['addresse_mail'])){
+    
+    if(isset($_SESSION['nom'])){
+        $message_accueil = 'Bienvenue ' . $_SESSION['nom'];
+    }
+    else{
+        $message_accueil = 'Bienvenue';
+    }
     require_once(__DIR__.'/../views/accueil.php');
-}
+    }
+    
 else{
     require_once(__DIR__.'/../views/connexion.php');
 }

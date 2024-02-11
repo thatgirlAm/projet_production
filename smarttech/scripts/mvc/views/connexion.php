@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+<!--A faire : 
+ - Mot de passe oublié 
+ - logo
+ - styles
+-->
 <html lang="en">
     <head>
         <meta charset="UTF-8">

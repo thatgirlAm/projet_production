@@ -13,7 +13,7 @@ function include_header(){
 function include_footer() {
     ?>
     <footer>
-        Copyright!©️TAI <a href="mailto:">Contact</a>
+        Copyrights!<br>©️TAI <a href="mailto:">Contact</a>
     </footer>
     <?php
 }
