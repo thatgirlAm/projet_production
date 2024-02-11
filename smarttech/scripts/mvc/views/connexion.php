@@ -9,6 +9,7 @@
     <body>
         
         <?php include_header(); ?>
+        <h1>Page de connexion</h1>
 
         <?php 
             if (isset($something_to_say)) {
