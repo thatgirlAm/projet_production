@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/example.css">
-        <title>Connexion SmartTech</title>
-    </head>
-    <body>
-        
-        <?php include_header(); ?>
-        <h1>Page de connexion</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Accueil</title>
+</head>
+<body>
+    <!--Entête-->
+    <!--<img src="logo.jpeg" alt="Logo">-->
+    <div class="titre">
+        <h1>Portail de connexion</h1>
+    </div>
 
-        <?php 
-            if (isset($something_to_say)) {
-                include_error_message($something_to_say);
-            }
-        ?>
-
-        <form method="post" action="loginController.php">
-            <fieldset>
-                <legend>Se connecter</legend>
-                <input type="text" placeholder="Addresse Mail" id="addresse_mail" name="addresse_mail">
-                <input type="password" placeholder='Mot de Passe' id='mdp' name="mdp">
-                <button type="submit">Submit</button>
-            </fieldset>
-        </form>
-
-        <?php include_footer(); ?>
-
-    </body>
+    <!--Rectangle identification-->
+        <div class="rectangle_connexion">
+            <div class="box_email">
+                <label for="mail" id="label_email">Rentrez votre mail :</label>
+                <input type="mail" id="email">
+            </div>
+            <div class="box_mdp">
+                <label for="email" id="label_mdp">Rentrez votre mot de passe :</label>
+                <input type="password" id="mdp">
+            </div>
+                <button class="bouton_validation" value="Se connecter">
+            </div>
+            <p>test</p>
+            
+</body>
 </html>
