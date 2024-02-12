@@ -29,6 +29,19 @@ if(isset($_POST['logout'])){
 require_once(__DIR__.'/../views/includes.php');
 
 if(isset($_SESSION['addresse_mail'])){
+    
+    if(isset($_SESSION['nom'])){
+        $message_accueil = 'Bienvenue ' . $_SESSION['nom'];
+    }
+    else{
+        $message_accueil = 'Bienvenue';
+    }
+
+
+    require_once(__DIR__.'/../models/ModelProduit.php');
+    
+    $produit = new ProduitModel();
+    $liste = $produit->getProduits();
     require_once(__DIR__.'/../views/accueil.php');
 }
 else{
