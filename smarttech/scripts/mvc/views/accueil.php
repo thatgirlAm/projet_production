@@ -17,9 +17,25 @@
     //--Bienvenue $user--//
     echo $message_accueil;
 
- ?>
   
-
+  if (is_array($liste)  && !empty($liste)) {
+        echo "<ul>";
+        foreach ($liste as $produit) {
+            print_r($produit);
+            echo "<li>" . $produit['id']. "</li>";
+        }
+        echo "</ul>";   
+    } 
+    else {
+            echo "Aucun produit en stock"; // In case $liste is empty or not an array
+        }
+    ?>
+    
+    <!--Choix production ou conformité-->
+    <?php  
+    
+    
+    ?> 
 
 </body>
 <footer><?php include_footer(); ?></footer>

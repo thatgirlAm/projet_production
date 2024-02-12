@@ -20,6 +20,7 @@ class Usermodel extends DBModel{
     if (count($entries)==1){
         $result["addresse_mail"] = $entries[0]["addresse_mail"];
         $result["nom"] = $entries[0]["nom"];
+        $result["id"] = $entries[0]["id"];
     } 
     return $result;
     }
