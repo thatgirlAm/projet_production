@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!--A retravailler-->
-
-<html lang="en">
+<html lang="fr">
 <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
@@ -9,35 +7,40 @@
     <title>Accueil SmartTech</title>
 </head>
 <body>
-    <h1>Page d'accueil</h1>
-    <?php include_header(); ?>
+    <h1>Page d'accueil SmartTech</h1>
+    <?php include 'header.php'; ?>
     
-    <a href=""></a>
-   <?php 
-    $message_accueil = "Rien";
-    //--Bienvenue $user--//
-    echo $message_accueil;
+    <!-- ... your existing PHP code ... -->
 
-  
-  if (is_array($liste)  && !empty($liste)) {
-        echo "<ul>";
-        foreach ($liste as $produit) {
-            print_r($produit);
-            echo "<li>" . $produit['id']. "</li>";
-        }
-        echo "</ul>";   
-    } 
-    else {
-            echo "Aucun produit en stock"; // In case $liste is empty or not an array
-        }
-    ?>
-    
     <!--Choix production ou conformité-->
+    <div>
+        <h2>Choisissez une catégorie:</h2>
+        <!-- Buttons to choose Production or Conformité -->
+        <a href="?categorie=production" class="button">Production</a>
+        <a href="?categorie=conformite" class="button">Conformité</a>
+    </div>
+    
     <?php  
-    
-    
+        if (isset($_GET['categorie'])) {
+            $categorie = $_GET['categorie'];
+            if ($categorie == 'production') {
+                // Show Production options
+                echo '<div>
+                        <h3>Production:</h3>
+                        <a href="?categorie=production&type=telephone" class="button">Téléphone</a>
+                        <a href="?categorie=production&type=tablette" class="button">Tablette</a>
+                      </div>';
+            } elseif ($categorie == 'conformite') {
+                // Show Conformité options
+                echo '<div>
+                        <h3>Conformité:</h3>
+                        <a href="?categorie=conformite&type=telephone" class="button">Téléphone</a>
+                        <a href="?categorie=conformite&type=tablette" class="button">Tablette</a>
+                      </div>';
+            }
+        }
     ?> 
 
 </body>
-<footer><?php include_footer(); ?></footer>
+<footer><?php include 'footer.php'; ?></footer>
 </html>
