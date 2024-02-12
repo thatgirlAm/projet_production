@@ -29,6 +29,11 @@ if(isset($_POST['logout'])){
     session_destroy();
 }
 
+    if (isset($_POST['logout'])) {
+        session_start();
+        session_destroy();
+    }
+
 require_once(__DIR__.'/../views/includes.php');
 
 if(isset($_SESSION['addresse_mail'])){

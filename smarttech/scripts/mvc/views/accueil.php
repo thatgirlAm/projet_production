@@ -23,9 +23,17 @@
                   conformité téléphone / conformité tablettes -->
 
     <?php  
-    
-    
+
+
     ?> 
+
+ <form method="post" action="loginController.php">
+                <fieldset>
+                    <legend>Se déconnecter</legend>
+                    <button type="submit">Se déconnecter</button>
+                </fieldset>
+            </form>
+<!--<a href="loginController.php">Log out</a>-->
 
 </body>
 <footer><?php include_footer(); ?></footer>
