@@ -42,7 +42,7 @@ if(isset($_SESSION['addresse_mail'])){
 
 
     require_once(__DIR__.'/../models/ModelProduit.php');
-
+    
     $produit = new ProduitModel();
     $liste = $produit->getProduits();
     require_once(__DIR__.'/../views/accueil.php');

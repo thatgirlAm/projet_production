@@ -12,6 +12,7 @@
     <h1>Page d'accueil</h1>
     <?php include_header(); ?>
     
+    <a href=""></a>
    <?php 
     $message_accueil = "Rien";
     //--Bienvenue $user--//
