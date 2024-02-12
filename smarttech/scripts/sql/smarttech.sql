@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `employe` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_service` int(11) NOT NULL,
   `nom` text NOT NULL,
-  `adresse_mail` text NOT NULL,
+  `addresse_mail` text NOT NULL,
   `mdp` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `employe` (
 -- Déchargement des données de la table `employe`
 --
 
-INSERT INTO `employe` (`id`, `id_service`, `nom`, `adresse_mail`, `mdp`) VALUES
+INSERT INTO `employe` (`id`, `id_service`, `nom`, `addresse_mail`, `mdp`) VALUES
 (1, 1, 'Troufi', 'troufi@gmail.com', 'AAHJ1/'),
 (2, 2, 'Diop', 'diop@gmail.com', 'DDFT3.');
 

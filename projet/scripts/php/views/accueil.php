@@ -43,6 +43,7 @@
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <div class="sidebar">
         <h2>Menu</h2>
         <ul>
@@ -60,5 +61,28 @@
         <img src="path_to_your_device_image.png" alt="Device">
     -->
 </div>
+=======
+    <h1>Bienvenue</h1>
+<!--Php bienvenue $nom_user-->
+
+<main>
+    <h3>Bienvenue <?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname'] . "!!"; ?></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <!-- A form to logout -->
+    <!-- It redirects to the form controller -->
+    <!-- Note that this could have been done with a simple link and a $_GET parameter -->
+    <form method="post" action="index.php">
+        <fieldset>
+            <legend>Logout</legend>
+            <button type="submit">Logout</button>
+        </fieldset>
+    </form>
+    
+</main>
+
+
+>>>>>>> 6204c9db4f339489d34f1600e29b027e94af2275
 </body>
 </html>
