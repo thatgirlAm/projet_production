@@ -1,10 +1,12 @@
-dropdown-content{
-    display : none;
-}
-dropdown-content a{
-    display: block;
+.dropdown{
+    background-color: blue;
+    color: antiquewhite;
 }
 
-.show {
+.dropdown-content{
+    display: none;
+}
+
+.dropdown:hover .dropdown-content{
     display: block;
 }

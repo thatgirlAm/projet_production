@@ -1,6 +1,6 @@
 <?php
 
-//Début du code corrigé par chatgpt
+//--Header--//
 function include_header(){
     ?>
     <header>
@@ -9,7 +9,31 @@ function include_header(){
     <?php
 }
 
+//--Menu de navigation--//
 
+function include_menu(){
+    ?>
+    <div class="menu" id="menu">
+    <a href="#" class="boutonAccueil">Accueil</a>
+    <div class="dropdown">
+        <button class="boutonDropdown">Production</button>
+        <div class="dropdown-content">
+            <a href="productionController.php?item=tablettes">Tablettes</a>
+            <a href="productionController.php?item=telephones">Téléphones</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="boutonDropdown">Conformité</button>
+        <div class="dropdown-content">
+            <a href="conformiteController.php?item=tablettes">Tablettes</a>
+            <a href="conformiteController.php?item=telephones">Téléphones</a>
+        </div>
+    </div>
+</div>
+    <?php
+}
+
+//--Footer--//
 function include_footer() {
     ?>
     <footer>
@@ -17,6 +41,8 @@ function include_footer() {
     </footer>
     <?php
 }
+
+//--Message d'erreur--//
  function include_error_message($message) {
         echo "<p class='error_message'>" . $message . "</p>";
     }
