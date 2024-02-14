@@ -15,7 +15,7 @@
    <?php 
     //--Bienvenue $user--//
     echo $message_accueil;?>
-
+<?php include_messageEmployes()?>
     <?php  
         if (isset($_GET['categorie'])) {
             $categorie = $_GET['categorie'];

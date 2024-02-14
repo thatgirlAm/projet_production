@@ -1,5 +1,5 @@
 <?php
 
 require_once(__DIR__.'../models/productionModel.php');
-$produitsProduction = new ProduitModel() ; 
+$choix = $_POST['choix']; 
 require_once(__DIR__.'../views/planification.php');
