@@ -9,8 +9,23 @@ function include_header(){
     <?php
 }
 
-//--Menu de navigation--//
+//--Message personnalisé--//
 
+function include_message_accueil(){
+    if(isset($_SESSION['addresse_mail'])){
+    
+        if(isset($_SESSION['nom'])){
+            $message_accueil = 'Bienvenue ' . $_SESSION['nom'];
+        }
+        else{
+            $message_accueil = 'Bienvenue';
+        }}
+    
+    echo $message_accueil;
+    
+}
+
+//--Menu de navigation--//
 function include_menu(){
     ?>
     <div class="menu" id="menu">

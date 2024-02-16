@@ -10,24 +10,10 @@
 <body>
     <h1>Page d'accueil SmartTech</h1>
     <?php include_header(); ?>
-    
     <?php include_menu();?>
-   <?php 
-    //--Bienvenue $user--//
-    echo $message_accueil;?>
-<?php include_messageEmployes()?>
-    <?php  
-        if (isset($_GET['categorie'])) {
-            $categorie = $_GET['categorie'];
-            if ($categorie == 'production') {
-                $show_production = ~$show_production;
+    <?php include_message_accueil()?>
+    <?php include_messageEmployes()?>
 
-            } elseif ($categorie == 'conformite') {
-                $show_conformite = ~$show_conformite;
-
-            }
-        }
-    ?> 
 
 <form method="post" action="loginController.php">
                     <button type="submit">Se déconnecter</button>
