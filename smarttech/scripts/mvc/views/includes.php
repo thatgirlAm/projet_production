@@ -4,7 +4,7 @@
 function include_header(){
     ?>
     <header>
-        <img src="projet_production\smarttech\images\logo.jpeg" alt="logo">
+        <img src="../../../images/logo_smarttech.png" alt="logo" class="logo">
     </header>
     <?php
 }
@@ -25,20 +25,26 @@ function include_message_accueil(){
     
 }
 
-//--Menu de navigation--//
+
+//--Menu de navigation pages --//
 function include_menu(){
     ?>
+    
     <div class="menu" id="menu">
-    <button class = "boutonDropdown"><a href="accueilController.php">Accueil</a></button>
     <div class="dropdown">
-        <button class="boutonDropdown">Production</button>
+        <a href="accueilController.php">
+            <button class = "boutonDropdown">Accueil</button>
+        </a>
+    </div>
+    <div class="dropdown">
+        <button class="boutonDropdown">Service Production</button>
         <div class="dropdown-content">
             <a href="productionController.php?item=tablettes">Tablettes</a>
             <a href="productionController.php?item=telephones">Téléphones</a>
         </div>
     </div>
     <div class="dropdown">
-        <button class="boutonDropdown">Conformité</button>
+        <button class="boutonDropdown">Service Conformité</button>
         <div class="dropdown-content">
             <a href="conformiteController.php?item=tablettes">Tablettes</a>
             <a href="conformiteController.php?item=telephones">Téléphones</a>
