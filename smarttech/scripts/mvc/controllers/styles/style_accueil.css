@@ -68,22 +68,21 @@
 /*--Gestion des boutons--*/
 
 .bouton_normal {
-    padding: 5px;
     text-align: center;
     color: #fafafa;
     background-color: #0c0c0c;
     text-decoration: none;
     border-radius: 8px;
+    text-align: center;
 }
 
 
 /*-Body-*/
-body {
-    background-color:#fafafa;
-}
+
 
 *{
     font-family: "Montserrat" ;
+    background-color: #00CED1;
 }
 h1{
     text-align: center;

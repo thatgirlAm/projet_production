@@ -4,7 +4,7 @@
 function include_header(){
     ?>
     <header>
-        <img src="../../../images/logo_smarttech.png" alt="logo" class="logo">
+        <!--<img src="../../../images/logo_smarttech.png" alt="logo" class="logo">-->
     </header>
     <?php
 }
