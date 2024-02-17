@@ -12,7 +12,7 @@
     
     <h1>Page d'accueil SmartTech</h1>
     <?php include_header(); ?> 
-    <?php include_message_accueil()?>
+    <div class="message_accueil"><?php include_message_accueil()?></div>
     <?php include_menu();?>
    
 

@@ -1,8 +1,6 @@
 /*-Menu de navigation-*/
 /*----On s'occupe des bouton dropdown des menus----*/
-.logo{
-    align-items: center;
-}
+
 .dropdown{
     width: 100%;
     height: 100%;
@@ -91,3 +89,12 @@ h1{
     text-align: center;
 }
 
+.logo{
+    align-items: center;
+}
+
+.message_accueil{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
