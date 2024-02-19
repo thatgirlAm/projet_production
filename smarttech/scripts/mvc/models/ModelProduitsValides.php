@@ -4,7 +4,7 @@ require_once (__DIR__ . '/DBModel.php');
 
 class ProduitsValidesModel extends DBModel{
 
-    function check_login(int $id, string $type, int $etat)
+    function check_produits(int $id, string $type, int $etat)
     {
     $result = [];
     $request = "SELECT * FROM produit WHERE id=:id  AND type=:type AND etat=:etat";
