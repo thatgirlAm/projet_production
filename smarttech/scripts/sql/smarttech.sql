@@ -115,14 +115,14 @@ CREATE TABLE IF NOT EXISTS `produit` (
 -- Déchargement des données de la table `produit`
 --
 
-INSERT INTO `produit` (`id`, `type`, `etat`) VALUES
-(140, 'telephone', 1),
-(145, 'telephone', 0),
-(146, 'telephone', 0),
-(142, 'telephone', 1),
-(560, 'tablette', 1),
-(566, 'tablette', 1),
-(570, 'tablette', 0);
+INSERT INTO `produit` (`id`, `type`, `etat`, 'date') VALUES
+(140, 'telephone', 1 , none),
+(145, 'telephone', 0 , 12/03/24),
+(146, 'telephone', 0 , 10/11/24),
+(142, 'telephone', 1, none),
+(560, 'tablette', 1, none),
+(566, 'tablette', 1, 01/09/24),
+(570, 'tablette', 0, 09/07/24);
 
 -- --------------------------------------------------------
 

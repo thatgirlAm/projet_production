@@ -16,7 +16,7 @@ class ProduitsValidesModel extends DBModel{
         ]);
     $entries = $statement ->fetchAll();
 
-    if (etat == 1){  // Cela renvoi les produits validés
+    if ($etat == 1){  // Cela renvoi les produits validés
         $result["id"] = $entries[0]["id"]; 
         $result["type"] = $entries[0]["type"];
         $result["etat"] = $entries[0]["etat"];
