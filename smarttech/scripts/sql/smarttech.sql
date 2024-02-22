@@ -29,16 +29,16 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `critere`;
 CREATE TABLE IF NOT EXISTS `critere` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `enonce` text NOT NULL,
-  PRIMARY KEY (`Id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `critere`
 --
 
-INSERT INTO `critere` (`Id`, `enonce`) VALUES
+INSERT INTO `critere` (`id`, `enonce`) VALUES
 (1, 'Poids inférieur à 200g'),
 (2, 'Déformation < 1%');
 
@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `operation` (
 -- Déchargement des données de la table `operation`
 --
 
-INSERT INTO `operation` (`id`, `date`, `id_operateur`, `id_critere_ok`, `id_produit`, `id_critere_rejete`, `id_compte_rendu`, `statut`, `commentaire`, `id_manager`, `validation_manageur`, `validation_operateur`) VALUES
+INSERT INTO `operation` (`id`, `date`, `id_operateur`, `id_critere`, `id_produit`, `id_critere_rejete`, `id_compte_rendu`, `statut`, `commentaire`, `id_manager`, `validation_manageur`, `validation_operateur`) VALUES
 (1, '2024-01-30 11:52:00', 1, 1, 1, 1, 1, 'Validé', 'Parfait', 0, 0, 0),
 (2, '2024-01-30 11:54:00', 2, 2, 2, 2, 2, 'Non-validé', 'critére de poids non validé', 0, 0, 0);
 
@@ -117,12 +117,12 @@ CREATE TABLE IF NOT EXISTS `produit` (
 
 INSERT INTO `produit` (`id`, `type`, `etat`, 'date') VALUES
 (140, 'telephone', 1 , none),
-(145, 'telephone', 0 , 12/03/24),
-(146, 'telephone', 0 , 10/11/24),
+(145, 'telephone', 0 , 12-03-24),
+(146, 'telephone', 0 , 10-11-24),
 (142, 'telephone', 1, none),
 (560, 'tablette', 1, none),
-(566, 'tablette', 1, 01/09/24),
-(570, 'tablette', 0, 09/07/24);
+(566, 'tablette', 1, 01-09-24),
+(570, 'tablette', 0, 09-07-24);
 
 -- --------------------------------------------------------
 
@@ -143,8 +143,10 @@ CREATE TABLE IF NOT EXISTS `produit_critere` (
 --
 
 INSERT INTO `produit_critere` (`id`, `id_produit`, `id_critere`) VALUES
-(1, 1, NULL),
-(2, 2, NULL);
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 1),
+(4, 4, 2);
 
 -- --------------------------------------------------------
 

@@ -24,4 +24,3 @@ class PlannificationTelephone extends DBModel{
     }
 }
 
-// POUR AMAELLE: J'ai modifié la table produits dans la base de donnés de ma branche, j'ai rajouté une quatrieme collone 'date'. A toi de voir si tu met dans le main
