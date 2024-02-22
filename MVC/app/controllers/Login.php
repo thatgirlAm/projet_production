@@ -17,12 +17,6 @@ class Login {
                     $_SESSION['id'] = $result['id'];
                     redirect('home');
                 }
-                else{
-                    $msg_erreur = "mot de passe ou adresse mail invalide. Réessayer.";
-                }
-            }
-            else{
-                $msg_erreur = "mot de passe ou adresse mail invalide. Réessayer.";
             }
         }
         

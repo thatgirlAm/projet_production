@@ -11,7 +11,7 @@ class ProduitsValidesModel extends DBModel{
     $statement = $this->db->prepare($request);
     $statement->execute([
         "id" => $id,
-        "type" => $type
+        "type" => $type,
         "etat" => $etat
         ]);
     $entries = $statement ->fetchAll();

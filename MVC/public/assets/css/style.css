@@ -1,3 +1,11 @@
 *{
-    background-color: aqua;
+    background-color: antiquewhite;
+}
+
+.listeCriteres{
+    text-align: center;
+}
+
+legend{
+    font-style: italic;
 }

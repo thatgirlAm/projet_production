@@ -3,7 +3,7 @@
 //--------------Non instanciable (pas de table spécifique)-----------//
 Trait Model {
     use Database;
-    protected $limit=10;
+    protected $limit=50;
     protected $offset=0;
     protected $orderType = "desc";
     protected $orderColumn = "id";
@@ -36,24 +36,29 @@ Trait Model {
     return false;
     }
     //-------------------Requête avec Where-----------------------//
-    public function where($data, $data_not = []){
+    public function where($data, $data_not = [], $table2=''){
         /*------------$data représente les données que l'on recherche-----------//
         -----$data_not représente le tableau de données dont on ne voudrait pas-*/
         $keys = array_keys($data);
         $keys_not = array_keys($data_not);
-        $query='select * from $this->table where ';
+        //----On peut choisir une table différente pour la requête----//
+        if ($table2 != '') {
+            $query="select * from {$table2} where ";}
+        else {
+            $query="select * from {$this->table} where ";}
+        //----Ajout de conditions----//
         foreach ($keys as $key){
-            $query .= $key.'=:'.$key .' && ';
+            $query .= $key."=:".$key ." && ";
         }
         foreach ($keys_not as $key){
-            $query .= $key.'!=:'.$key.' && ';
+            $query .= $key."!=:".$key." && ";
         }
         $query = trim($query, " && ");
-        $query .= ' order by $this-> orderColumn $this->orderType limit $this->limit offset $this->offset';
+        $query .= " order by {$this-> orderColumn} {$this->orderType} limit {$this->limit} offset {$this->offset}";
         $data = array_merge($data, $data_not);
         return $this->query($query, $data) ; 
     }
-
+    
     //----------------------------Fonction Find All--------------------------//
     public function findAll(){
         $query="select * from $this->table order by $this->orderColumn $this->orderType limit $this->limit offset $this->offset";
@@ -127,4 +132,5 @@ Trait Model {
         $this->query($query,$data);
         return false; 
     } 
+    
 }

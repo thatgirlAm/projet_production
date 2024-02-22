@@ -13,6 +13,7 @@
         <a class="nav-link fw-bold py-1 px-0" href="production">Production</a>
         <a class="nav-link fw-bold py-1 px-0" href="conformite">Conformité</a>
         <a class="nav-link fw-bold py-1 px-0" href="login">Login</a>
+        <a class="nav-link fw-bold py-1 px-0" href="critere">Nouvelle opération COnformité</a>
       </nav>
     </div>
   </header>
