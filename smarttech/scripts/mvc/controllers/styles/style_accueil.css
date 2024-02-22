@@ -1,8 +1,6 @@
 /*-Menu de navigation-*/
 /*----On s'occupe des bouton dropdown des menus----*/
-.logo{
-    align-items: center;
-}
+
 .dropdown{
     width: 100%;
     height: 100%;
@@ -70,24 +68,32 @@
 /*--Gestion des boutons--*/
 
 .bouton_normal {
-    padding: 5px;
     text-align: center;
     color: #fafafa;
     background-color: #0c0c0c;
     text-decoration: none;
     border-radius: 8px;
+    text-align: center;
 }
 
 
 /*-Body-*/
-body {
-    background-color:#fafafa;
-}
+
 
 *{
     font-family: "Montserrat" ;
+    background-color: #00CED1;
 }
 h1{
     text-align: center;
 }
 
+.logo{
+    align-items: center;
+}
+
+.message_accueil{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}

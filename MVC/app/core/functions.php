@@ -1,4 +1,16 @@
 <?php
+function show($stuff){
+    echo "<pre>";
+    print_r($stuff);
+    echo "</pre>";
+    }
+
+//-----Fonction pour empêcher de rentrer dans des loops où l'utilisateur peut run des scripts Js----//
+function esc($str){
+    return htmlspecialchars($str);
+}
+
+
 
 //--Header--//
 function include_header(){
@@ -25,6 +37,12 @@ function include_message_accueil(){
     
 }
 
+function redirect($path)
+{
+	header("Location: " . ROOT."/".$path);
+	die;
+}
+
 
 //--Menu de navigation pages --//
 function include_menu(){
@@ -37,23 +55,23 @@ function include_menu(){
         </a>
     </div>
     <div class="dropdown">
-        <button class="boutonDropdown">Service Production</button>
+    <form method="post" action="productionTelController.php">
+        <button class="boutonDropdown">Service Production</button></form>
         <div class="dropdown-content">
-            <a href="productionController.php?item=tablettes">Tablettes</a>
-            <a href="productionController.php?item=telephones">Téléphones</a>
+            <a href="productionTabController.php">Tablettes</a>
+            <a href="productionTelController.php">Téléphones</a>
         </div>
     </div>
     <div class="dropdown">
         <button class="boutonDropdown">Service Conformité</button>
         <div class="dropdown-content">
-            <a href="conformiteController.php?item=tablettes">Tablettes</a>
-            <a href="conformiteController.php?item=telephones">Téléphones</a>
+            <a href="conformiteController.php">Tablettes</a>
+            <a href="conformiteController.php">Téléphones</a>
         </div>
     </div>
 </div>
     <?php
 }
-
 //--Message aux employés--//
 
 function include_messageEmployes(){

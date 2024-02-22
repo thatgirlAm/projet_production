@@ -1,0 +1,10 @@
+#------Redirection 
+#-------Activation de engine
+RewriteEngine On
+
+#-------Si le dossier ou le fichier est existant, charger le fichier demandé
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#-------Sinon, rediriger vers l'index.php 
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
