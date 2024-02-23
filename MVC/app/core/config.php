@@ -3,7 +3,7 @@
 //----Cas où on se connecte au localHost ou à un server distant----//
 
 if($_SERVER['SERVER_NAME']=='tai'){
-    define('ROOT', 'http://tai/MVC/public/');
+    define('ROOT', 'http://tai/projet_production/MVC/public/');
 
     //----Identifiants en local----//
     define('DBNAME','smarttech');

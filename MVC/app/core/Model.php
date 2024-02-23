@@ -5,7 +5,7 @@ Trait Model {
     use Database;
     protected $limit=50;
     protected $offset=0;
-    protected $orderType = "desc";
+    protected $orderType = "asc";
     protected $orderColumn = "id";
     
     //----------------Fonction query pour les requêtes--------------//
@@ -64,7 +64,16 @@ Trait Model {
         $query="select * from $this->table order by $this->orderColumn $this->orderType limit $this->limit offset $this->offset";
         return $this->query($query) ; 
     }
-
+    public function findSpecific($data){
+        $array = array_keys($data);
+        $query="select ";
+        foreach ($array as $key){
+            $query .= $key." , ";
+        }
+        $query = trim($query, " , ");
+        $query.=" from $this->table order by $this->orderColumn $this->orderType limit $this->limit offset $this->offset";
+        return $this->query($query) ; 
+    }
     
     //---------Exactement comme where mais avec une condition à la fin----------//
    

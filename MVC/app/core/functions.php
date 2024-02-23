@@ -39,7 +39,7 @@ function include_message_accueil(){
 
 function redirect($path)
 {
-	header("Location: " . ROOT."/".$path);
+    header("Location: " .ROOT.$path);
 	die;
 }
 

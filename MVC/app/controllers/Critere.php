@@ -1,5 +1,5 @@
 <?php 
-class Critere{
+class Critere {
     use Controller; 
     public function index(){
         $tableauCriteres = new Criteres;
@@ -7,5 +7,4 @@ class Critere{
         $listeOperateurs = $tableauCriteres->getListeOperateurs();
         $this->view("Criteres", ['liste'=>$liste, 'listeOperateurs'=>$listeOperateurs]);
     }
-    
 }

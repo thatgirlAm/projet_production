@@ -9,7 +9,11 @@
 <body>
     <?php include_header();
     echo  '<h1>Opération de conformité</h1>';?>
-    <fieldset><legend>Formulaire Opérations :</legend>
+    
+    <fieldset lass="fieldset_general"><legend>Formulaire Opérations :</legend>
+    <button id="buttonForm">Nouvelle Opération </button>
+    <div id="operationForm" class="hidden">
+    <form method="post" action="compteRendu">
     <fieldset>
     
     <!-- Choix Opérateur à partir de la BD -->
@@ -30,7 +34,15 @@
         <?php if (is_array($liste) && !empty($liste)){
             echo "<ul class='listeCriteres'>";
                 foreach ($liste as $key) {
-                    echo '<br><br><input type="checkbox" id="control2" name="control2" unchecked>'; "<li>".print_r($key['enonce'])."</li>";
+                    echo "<div class='critere'>";
+                    echo "<br>";
+                    echo "<label class='switch'>";
+                    echo "<input type='checkbox' unchecked>";
+                    echo "<span class='slider round'></span>";
+                    echo "</label>"; 
+                    echo " <strong>Id critère :</strong> " . htmlspecialchars($key['id'])."<br><strong>Critère :</strong> ";
+                    echo htmlspecialchars($key['0']);
+                    echo "</div>";
                 }
             echo "</ul>";
         }
@@ -38,7 +50,28 @@
             echo "aucun critère";
         }
         ?>
+    <div class="commentaire" id="commentaire">
+        <label for="commentaire">Ajouter un commentaire : </label>
+        <input type="text" name ="commentaireOperateur" id="commentaireOperateur">
+    </div>
+         
+                <button type="submit" class="bouton_normal">Valider</button>
+        </form>
     </fieldset>
+</div>
+
+<!--*****************************Javascript********************-->
+    <script>
+        //----Fonction pour cacher le formulaire----//
+        function toggleForm() {
+        var form = document.getElementById('operationForm');
+        form.classList.toggle('hidden');
+    }
+    //----Ajout d'eventListener pour les clicks----//
+    document.getElementById('buttonForm').addEventListener('click', toggleForm); 
+ 
+    </script>
+
     <?php include_footer();?>
 </body>
 </html>

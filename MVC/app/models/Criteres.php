@@ -4,7 +4,7 @@ class Criteres {
     use Model; 
     protected $table=  "critere";   
     public function getCriteres(){ 
-        return $this->findAll();
+        return $this->findSpecific(['enonce'=>'enonce', 'id'=>'id']);  
     }
     public function getListeOperateurs(){
         $listeOperateurs = $this->where(array('id_service'=>1),[],'employe');
