@@ -18,7 +18,7 @@
     
     <!-- Choix Opérateur à partir de la BD -->
     <label for="labelOperateur">Opérateur : </label>
-    <select name="cars" id="cars">
+    <select name="operateur" id="operateur">
         <?php 
         if (is_array($listeOperateurs) && !empty($listeOperateurs)) {
             foreach ($listeOperateurs as $operateur) {
@@ -27,6 +27,7 @@
         } else {
             echo "<option value=''>Aucun opérateur disponible</option>";
         }
+
         ?>
     </select>
 </fieldset>
@@ -37,11 +38,10 @@
                     echo "<div class='critere'>";
                     echo "<br>";
                     echo "<label class='switch'>";
-                    echo "<input type='checkbox' unchecked>";
+                    echo "<input type='checkbox' name='criteres[" . $key['id'] . "]' value='" . $key['id'] . "' id='critere" . $key['id'] . "'>";
                     echo "<span class='slider round'></span>";
-                    echo "</label>"; 
-                    echo " <strong>Id critère :</strong> " . htmlspecialchars($key['id'])."<br><strong>Critère :</strong> ";
-                    echo htmlspecialchars($key['0']);
+                    echo "</label>";
+                    echo "<strong>Id critère :</strong> " . htmlspecialchars($key['id']) . "<br><strong>Critère :</strong> " . htmlspecialchars($key['0']);
                     echo "</div>";
                 }
             echo "</ul>";

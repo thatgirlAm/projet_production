@@ -12,7 +12,9 @@ class CompteRendu {
         else{
             $commentaireOperateur = 'Pas de commentaire opérateur'; 
         }
-        $data = array('commentaireOperateur' => $commentaireOperateur);
+        $infos = $compteRendu->getInformations($_POST);
+        $data = array('infos'=>$infos, 'commentaireOperateur' => $commentaireOperateur);
+
         $this->view('CompteRendu', $data);
 
     }}

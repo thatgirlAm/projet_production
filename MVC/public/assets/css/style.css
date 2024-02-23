@@ -103,3 +103,85 @@ legend{
   margin-top: 50px;
   margin-left: auto;
 }
+
+/*-Menu de navigation-*/
+/*----On s'occupe des bouton dropdown des menus----*/
+
+.dropdown{
+  width: 100%;
+  height: 100%
+}
+.dropdown-content{
+  display: none;
+  position: center;
+  background-color: #f9f9f9;
+  z-index: 1;
+}
+
+.dropdown-content a:hover{
+  background-color: #AFEEEE;
+  color: #0c0c0c;
+}
+
+.dropdown-content a {
+  float: none;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block flex;
+  flex-direction: column;
+}
+
+.menu{
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: 	#00CED1;
+  flex-direction: row;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.menu a{
+  text-decoration: none;
+  overflow: hidden;
+  float: left;
+}
+
+.menu > div {
+  width: 33%;
+  height: 50%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.boutonDropdown{
+  width: 100%;
+  padding: 20px;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+}
+.boutonDropdown:hover{
+  background-color: #AFEEEE;
+  color: #0c0c0c;
+}
+
+/*--Gestion des boutons--*/
+
+.bouton_normal {
+  padding: 5px;
+  text-align: center;
+  color: #fafafa;
+  background-color: #0c0c0c;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+
+/*-Body-*/
+
