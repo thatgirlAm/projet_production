@@ -39,7 +39,7 @@ function include_message_accueil(){
 
 function redirect($path)
 {
-	header("Location: " . ROOT."/".$path);
+    header("Location: " .ROOT.$path);
 	die;
 }
 
@@ -50,23 +50,23 @@ function include_menu(){
     
     <div class="menu" id="menu">
     <div class="dropdown">
-        <a href="accueilController.php">
+        <a href="home">
             <button class = "boutonDropdown">Accueil</button>
         </a>
     </div>
     <div class="dropdown">
-    <form method="post" action="productionTelController.php">
-        <button class="boutonDropdown">Service Production</button></form>
+    <form method="post" action="home">
+        <button class="home">Service Production</button></form>
         <div class="dropdown-content">
-            <a href="productionTabController.php">Tablettes</a>
-            <a href="productionTelController.php">Téléphones</a>
+            <a href="home">Tablettes</a>
+            <a href="home">Téléphones</a>
         </div>
     </div>
     <div class="dropdown">
-        <button class="boutonDropdown">Service Conformité</button>
+        <button class="boutonDropdown" action="critere">Service Conformité</button>
         <div class="dropdown-content">
-            <a href="conformiteController.php">Tablettes</a>
-            <a href="conformiteController.php">Téléphones</a>
+            <a href="home">Tablettes</a>
+            <a href="home">Téléphones</a>
         </div>
     </div>
 </div>
