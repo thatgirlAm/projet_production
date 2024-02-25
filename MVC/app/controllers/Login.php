@@ -6,6 +6,7 @@ class Login {
 
     public function index(){
         //----Chargement de la fonction view()----//
+        $_SESSION=[];
         
         $this->view('login');
         if(isset($_POST['addresse_mail']) && isset($_POST["mdp"])){
@@ -16,10 +17,15 @@ class Login {
                     $_SESSION['addresse_mail'] = $result['addresse_mail'];
                     $_SESSION['nom']= $result['nom'];
                     $_SESSION['id'] = $result['id'];
-                    $_SESSION['service']= $userModel->getService($_SESSION['nom']);
+                    $_SESSION['service']= $result['id_service'];
                     redirect('home'); 
                 }
             }
+        }
+        if (isset($_POST['logout'])) {
+            session_start();
+            session_destroy();
+            redirect( 'login' );
         }
     }
 }

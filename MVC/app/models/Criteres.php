@@ -10,5 +10,9 @@ class Criteres {
         $listeOperateurs = $this->where(array('id_service'=>1),[],'employe');
         return  $listeOperateurs;
     }
+    public function getIdProduits($type){
+        $listeProduits = $this->where(array('type'=>$type),[],'produit');
+        return  $listeProduits;
+    }
 
 }

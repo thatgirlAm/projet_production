@@ -1,8 +1,11 @@
 body{
-background-color: #b0af6a;
+background-color: #033431;
+color: #f9f9f9;
+font-family: "Montserrat" ;
 }
 h1{
   text-align: center;
+  margin-top: 50px;
 }
 .listeCriteres{
     display: flex;
@@ -78,17 +81,15 @@ legend{
   .bouton_normal {
     text-align: center;
     color: #fafafa;
-    background-color: #284e31;
     text-decoration: none;
     border-radius: 8px;
     width: 100px;
-    height: 30px;
+    height: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 100px;
     margin-bottom: 50px;
     margin-left: 50%;
+    padding: 60 px;
 }
 
 
@@ -144,11 +145,11 @@ legend{
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
-  background-color: 	#2a4646;
+  background-color: #F1DECD;
   flex-direction: row;
   width: 100%;
   text-decoration: none;
-  color: #fafafa;
+  color: #0c0c0c;
   text-align: center;
 
 }
@@ -177,6 +178,7 @@ legend{
   color: inherit;
   text-align: center;
 }
+
 .boutonDropdown:hover{
   background-color: #d0dfd3ba;
   color: #0c0c0c;
@@ -240,10 +242,16 @@ li{
   margin-bottom: 3%;
   margin-top: 3%;
   margin-left: 15%;
-  background-color: #575b5c;
+  background-color: #F1DECD;
   border-width: 0.5px;
-  color: #fafafa;
+  color: #101616;
   border-radius: 8px;
+  text-decoration: none;
+  
+}
+.buttonFormulaire:hover, .buttonFormulaire:active, .buttonFormulaire:visited{
+  background-color: #F1DECD;
+  color:#101616;
 }
 .listeTelephonesConformite{
   margin-top : 100 px;
@@ -283,21 +291,128 @@ h3{
   margin-bottom: 20px;
 }
 
-a:link{
-  color : black;
-}
-
-a:active {
-  color: black;
-}
-a:visited {
-  color: black;
-}
-a:hover{
-  color: honeydew;
-}
 .compartimentTablette{
   display :flex;
   flex-direction: row;
   align-items: center;
+}
+.fieldset_general{
+  margin-top: 30px;
+}
+
+footer{
+  margin-top: 20px;
+  font-style: italic;
+  bottom : 0px;
+}
+
+.messageUser{
+  display: flex;
+  flex-direction: column;
+}
+.titre2{
+  text-align: center;
+}
+
+.logo{
+  border-radius: 50%;
+  width: 100px;
+  margin: 10px;
+  left :0;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  align-content: flex-end;
+}
+
+.userInfos {
+   text-align: center;
+  
+}
+
+.deconnexion1 {
+  display: flex;
+  align-items: center; 
+}
+
+.presentation{
+  text-align: center;
+  margin-top: 20px;
+}
+.fieldset1{
+  margin-top: 50px;
+}
+
+.identifiantsProf{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.accesProduTech{
+  text-decoration: none;
+  border: none;
+  color: #0c0c0c;
+  padding: 15px 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  margin-left: 25%;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color:#F1DECD ;
+}
+
+.accesProduTech:hover {
+  background-color: #a1a232b4;
+  text-decoration: none;
+  color: #F1DECD;
+}
+
+.accesProduTech:visited {
+  background-color: #a1a232b4;
+  text-decoration: none;
+  color: #F1DECD;
+  
+}
+
+.logoDisclaimer{
+  border-radius: 50%;
+  width: 250px;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.fieldset2{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 50px;
+  padding-left: 50px;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.identifiantsProf > div{
+  margin : 0 20px;;
+}
+
+fieldset{
+  background-color: #696a2853;
+  border-radius: 5px;
+}
+
+header{
+  margin-top: 50px;
+}
+
+.deconnexion1{
+  right: 0;
 }

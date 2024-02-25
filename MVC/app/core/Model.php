@@ -56,7 +56,8 @@ Trait Model {
         $query = trim($query, " && ");
         $query .= " order by {$this-> orderColumn} {$this->orderType} limit {$this->limit} offset {$this->offset}";
         $data = array_merge($data, $data_not);
-        return $this->query($query, $data) ; 
+        $list = $this->query($query, $data);
+        return $list ; 
     }
     
     //----------------------------Fonction Find All--------------------------//

@@ -5,35 +5,22 @@ class ValidationConformite{
     public function index(){
         $validationConformite = new ValConformite() ;
         $data = array(
-            'id'=>$_POST['id'],
+            'id'=>$_SESSION['id'],
             'date'=> $_POST['date'],
-            'idOperateur'=>$_POST ['idOperateur'],
             'critereChecked'=> $_POST['critereChecked'], 
             'idProduit'=>$_POST['idProduit'], 
-            'criteresUnchecked'=>$_POST['criteresUnchecked'],
-            'idCompteRendu'=>$_POST['idCompteRendu'],
-            'statut'=>$_POST['statut'],
-            'commentaireManager'=>$_POST['commentaireManager'],
-            'idManager'=>$_POST['idManager']);
-        
+            'criteresUnchecked'=>$_POST['criteresUnchecked']);
         if(isset(
             $_POST['date'],
-            $_POST ['idOperateur'],
+            $_POST ['id'],
             $_POST['critereChecked'], 
             $_POST['idProduit'], 
-            $_POST['criteresUnchecked'],
-            $_POST['statut'],
-            $_POST['commentaireManager'],
-            $_POST['idManager'])){
-                $idOperateur = $_POST['idOperateur'];
+            $_POST['criteresUnchecked'])){
+                $idOperateur = $_POST['id'];
                 $critereChecked = $_POST['critereChecked'];
                 $idProduit = $_POST['idProduit'];
                 $critereUnchecked = $_POST['critereUnchecked'];
-                $statut = $_POST['statut'];
-                $commentaireManager=$_POST['commentaireManager'];
-                $idManager=$_POST['idManager'];
-                $data = array($idOperateur, $critereChecked, $idProduit, $critereUnchecked,
-                $statut, $commentaireManager, $idManager);
+                $data = array($idOperateur, $critereChecked, $idProduit, $critereUnchecked);
             $validationConformite->insertData($data);
             $this->view('ValidationConformite');
         }

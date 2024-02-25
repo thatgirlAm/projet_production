@@ -4,31 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
     <title>Nouvelle Opération</title>
 </head>
 <body>
-    <?php include_header();
-    echo  '<h1>Opération de conformité</h1>';?>
+    <?php echo  "<h1>Opération de conformité</h1>";
+     include_header();
+    include_menu();?>
+    
     
     <fieldset class="fieldset_general"><legend>Formulaire Opérations :</legend>
     <div id="operationForm" class="formulaire">
     <form method="post" action="compteRendu">
     <fieldset>
     
-    <!-- Choix Opérateur à partir de la BD -->
     <label for="labelOperateur">Opérateur : </label>
-    <select name="operateur" id="operateur">
+    <label for="operateur"><?php echo $_SESSION['nom']." (id :<div id='id'>".$_SESSION['id']."</div>)";?></label>
+    <br><br><label for="type">Type : </label>
+        <input type="radio" id="telephone" name="produit" class="telephone"><label>Telephone</label>
+        <input type="radio" id="tablette" name="produit" class="tablette"><label>Tablette</label>
+
+        <!-- Choix du produit à partir de la BD -->
+    <br><br><label for="labelIdProduit">Id Porduit : </label>
+    <select name="idProduit" id="idProduit">
         <?php 
-        if (is_array($listeOperateurs) && !empty($listeOperateurs)) {
-            foreach ($listeOperateurs as $operateur) {
-                echo "<option value='" . htmlspecialchars($operateur['nom']) . "'>" . htmlspecialchars($operateur['nom']) . "</option>";
+        if (is_array($listeProduitsTelephone) && !empty($listeProduitsTelephone)) {
+            foreach ($listeProduitsTelephone as $produit) {
+                echo "<option value='" . htmlspecialchars($produit['id']) . "'>" . htmlspecialchars($produit['id']) . "</option>";
             }
         } else {
-            echo "<option value=''>Aucun opérateur disponible</option>";
+            echo "<option value=''>Aucun produit à contrôler</option>";
         }
 
         ?>
     </select>
+    <br><br><label for="labeldateOperation"></label>Date d'opération : <input type="date" name="date" id="date" required><br>
 </fieldset>
             <br><legend>Critères : </legend>
         <?php if (is_array($liste) && !empty($liste)){
@@ -54,20 +65,34 @@
         <input type="text" name ="commentaireOperateur" id="commentaireOperateur">
     </div>
          
-                <button type="submit" class="bouton_normal">Valider</button>
+                <button type="submit" class="buttonFormulaire">Valider</button>
         </form>
     </fieldset>
 </div>
 <!--*****************************Javascript********************-->
 <script>
-        //----Fonction pour cacher le formulaire----//
-        function toggleForm() {
-        var form = document.getElementById('operationForm');
-        form.classList.toggle('hidden');
-    }
-    //----Ajout d'eventListener pour les clicks----//
-    document.getElementById('buttonForm').addEventListener('click', toggleForm); 
- 
+    var listeProduitsTelephone = <?php echo json_encode($listeProduitsTelephone); ?>;
+var listeProduitsTablette = <?php echo json_encode($listeProduitsTablette); ?>;
+    function updateProduitList() {
+    var select = document.getElementById('idProduit');
+    var telephone = document.getElementById('telephone').checked;
+    var tablette = document.getElementById('tablette').checked;
+    var listeProduits = telephone ? listeProduitsTelephone : listeProduitsTablette;
+
+    select.innerHTML = '';
+
+    listeProduits.forEach(function(produit) {
+        var option = new Option(produit.id);
+        select.appendChild(option);
+    });
+}
+
+document.getElementById('telephone').addEventListener('change', updateProduitList);
+document.getElementById('tablette').addEventListener('change', updateProduitList);
+
+window.onload = function() {
+    updateProduitList();
+};
     </script>
 
     <?php include_footer();?>

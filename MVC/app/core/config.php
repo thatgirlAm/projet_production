@@ -12,11 +12,11 @@ if($_SERVER['SERVER_NAME']=='tai'){
     define('DBPASS','');
 }
 else {
-    define('ROOT','https://devweb.estia.fr/tai/tai_crocodile/project/');
+    define('ROOT','https://devweb.estia.fr/tai/tai_crocodile/project/MVC/public/');
 
     //--Identificants en serveur--//
     define('DBNAME','tai_crocodile');
-    define('DBHOST','65.109.84.104');
+    define('DBHOST','localhost');
     define('DBUSER','tai_crocodile');
     define('DBPASS','SNUJ6GYBGS');
 }

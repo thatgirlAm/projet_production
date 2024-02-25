@@ -1,11 +1,11 @@
 <?php 
 class Application{
 
-    private $controller = 'Login';
+    private $controller = 'Disclaimer';
     private $method = 'index';
 
     private function splitURL(){
-        $url = $_GET['url'] ?? 'login';
+        $url = $_GET['url'] ?? 'disclaimer';
         $url= explode("/", trim($url, " /"));
         return $url;
     }

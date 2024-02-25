@@ -27,6 +27,7 @@ class User{
             $result["addresse_mail"] = $entries[0]["addresse_mail"];
             $result["id"] = $entries[0]["id"];
             $result["nom"] = $entries[0]["nom"];
+            $result["id_service"] = $entries[0]["id_service"];
         } 
         else{
             echo ERROR_LOGIN ; 
@@ -34,7 +35,11 @@ class User{
         
        return $result; 
         }
-
+        function getManager($idProduit){
+            $query = "SELECT service.nom FROM employe JOIN service ON employe.id_service = service.id WHERE employe.nom = :nom";
+            $result = $this->query($query);
+            return $result ;
+        }
         function getService($nom){
             $query = "SELECT service.nom FROM employe JOIN service ON employe.id_service = service.id WHERE employe.nom = :nom";
             $result = $this->query($query);
