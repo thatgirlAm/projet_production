@@ -1,7 +1,9 @@
-*{
-    background-color: antiquewhite;
+body{
+background-color: #b0af6a;
 }
-
+h1{
+  text-align: center;
+}
 .listeCriteres{
     display: flex;
     flex-direction: column;
@@ -89,14 +91,9 @@ legend{
     margin-left: 50%;
 }
 
-.fieldset_general{
-  display: flex;
-  flex-direction: column;
-  margin-left: 50%;
-}
 
-.hidden {
-  display: none;
+.formulaire{
+  margin: auto;
 }
 
 .commentaire{
@@ -109,11 +106,13 @@ legend{
 
 .dropdown{
   width: 100%;
-  height: 100%
+  overflow: hidden;
+  height: 100%;
+  float: left;
 }
 .dropdown-content{
   display: none;
-  position: center;
+  position: absolute;
   background-color: #f9f9f9;
   z-index: 1;
 }
@@ -121,6 +120,7 @@ legend{
 .dropdown-content a:hover{
   background-color: #AFEEEE;
   color: #0c0c0c;
+  
 }
 
 .dropdown-content a {
@@ -129,26 +129,36 @@ legend{
   padding: 12px 16px;
   display: block;
   text-align: center;
+  border-radius: inherit;
 }
 
 .dropdown:hover .dropdown-content{
   display: block flex;
   flex-direction: column;
+  width: 33%;
+  border-radius: 0 0 8px 8px;
+  background-color: #f9fff9;
 }
 
 .menu{
   display: flex;
   flex-wrap: nowrap;
-  background-color: 	#00CED1;
+  overflow: hidden;
+  background-color: 	#2a4646;
   flex-direction: row;
   width: 100%;
-  border-radius: 8px;
+  text-decoration: none;
+  color: #fafafa;
+  text-align: center;
+
 }
 
 .menu a{
+  float: left;
   text-decoration: none;
   overflow: hidden;
   float: left;
+  border: none;
 }
 
 .menu > div {
@@ -165,10 +175,12 @@ legend{
   border: none;
   background-color: inherit;
   color: inherit;
+  text-align: center;
 }
 .boutonDropdown:hover{
-  background-color: #AFEEEE;
+  background-color: #d0dfd3ba;
   color: #0c0c0c;
+  border-radius: inherit;
 }
 
 /*--Gestion des boutons--*/
@@ -180,8 +192,112 @@ legend{
   background-color: #0c0c0c;
   text-decoration: none;
   border-radius: 8px;
+  margin-left: 50%;
 }
 
 
 /*-Body-*/
 
+.listeCriteresCompteRendu{
+  display: flex;
+  flex-direction: row;
+}
+
+.compartimentTelephone {
+  display :flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#imageTelephone{
+  height: 150px;
+  width: 150 px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+li{
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.enfantTelephone{
+  border-radius: 8px;
+  box-shadow: -3px 2px 10px #0c0c0c;
+  background-color: #A5CDCE;
+  border: none;
+}
+
+.parent{
+  background-color: #a1a232b4;
+  border-radius: 8px;
+  border: none;
+
+}
+.buttonFormulaire{
+  width: 70%;
+  height: 40px;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-left: 15%;
+  background-color: #575b5c;
+  border-width: 0.5px;
+  color: #fafafa;
+  border-radius: 8px;
+}
+.listeTelephonesConformite{
+  margin-top : 100 px;
+  margin-right: auto;
+  width: 90%;
+
+}
+h3{
+  text-align: center;
+  font-style: italic;
+}
+
+.enfantTablette{
+  border-radius: 8px;
+  box-shadow: -3px 2px 10px #0c0c0c;
+  background-color: #69868c;
+  border: none;
+}
+
+#boutonControle{
+  text-decoration: none;
+}
+
+.listeCriteresValides{
+  display: flex;
+  flex-direction: column;
+}
+#imageTablette{
+  height: 150px;
+  width: 150 px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+.messageUser{
+  text-align: right;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+a:link{
+  color : black;
+}
+
+a:active {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover{
+  color: honeydew;
+}
+.compartimentTablette{
+  display :flex;
+  flex-direction: row;
+  align-items: center;
+}

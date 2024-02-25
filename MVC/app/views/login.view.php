@@ -16,7 +16,6 @@
     </head>
     <body>
         
-        <?php include_header(); ?>
         <h1>Page de connexion</h1>
 
         <?php 

@@ -10,9 +10,8 @@
     <?php include_header();
     echo  '<h1>Opération de conformité</h1>';?>
     
-    <fieldset lass="fieldset_general"><legend>Formulaire Opérations :</legend>
-    <button id="buttonForm">Nouvelle Opération </button>
-    <div id="operationForm" class="hidden">
+    <fieldset class="fieldset_general"><legend>Formulaire Opérations :</legend>
+    <div id="operationForm" class="formulaire">
     <form method="post" action="compteRendu">
     <fieldset>
     
@@ -59,9 +58,8 @@
         </form>
     </fieldset>
 </div>
-
 <!--*****************************Javascript********************-->
-    <script>
+<script>
         //----Fonction pour cacher le formulaire----//
         function toggleForm() {
         var form = document.getElementById('operationForm');

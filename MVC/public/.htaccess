@@ -6,5 +6,5 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-#-------Sinon, rediriger vers l'index.php du controller demandé----//
+#-------Sinon, rediriger vers l'index.php du controller home----//
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]

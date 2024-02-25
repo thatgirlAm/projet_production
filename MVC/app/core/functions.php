@@ -17,6 +17,18 @@ function include_header(){
     ?>
     <header>
         <!--<img src="../../../images/logo_smarttech.png" alt="logo" class="logo">-->
+        <?php if(isset($_SESSION['addresse_mail'])){
+    
+        if(isset($_SESSION['nom'])){
+            $message =  $_SESSION['nom'];
+            $id = $_SESSION['id'];
+            $service = $_SESSION['service'];
+        }}
+        else{
+            $message = 'Operateur X';
+        }
+
+    echo "<div class = messageUser>".$message."<br>Id Employe : ".$id."<br>Service : ".$service."</div>";?>
     </header>
     <?php
 }
@@ -28,14 +40,16 @@ function include_message_accueil(){
     
         if(isset($_SESSION['nom'])){
             $message_accueil = 'Bienvenue ' . $_SESSION['nom'];
-        }
+        }}
         else{
             $message_accueil = 'Bienvenue';
-        }}
+        }
     
     echo $message_accueil;
     
 }
+
+
 
 function redirect($path)
 {
@@ -50,23 +64,21 @@ function include_menu(){
     
     <div class="menu" id="menu">
     <div class="dropdown">
-        <a href="home">
-            <button class = "boutonDropdown">Accueil</button>
-        </a>
+    <button class="boutonDropdown" action="home">Accueil</button>
+
     </div>
     <div class="dropdown">
-    <form method="post" action="home">
-        <button class="home">Service Production</button></form>
+        <button class="boutonDropdown" action="production">Service Production</button>
         <div class="dropdown-content">
-            <a href="home">Tablettes</a>
-            <a href="home">Téléphones</a>
+            <a href="productionTablette">Tablettes</a>
+            <a href="productionTelephone">Téléphones</a>
         </div>
     </div>
     <div class="dropdown">
-        <button class="boutonDropdown" action="critere">Service Conformité</button>
+        <button class="boutonDropdown" action="conformite">Service Conformité</button>
         <div class="dropdown-content">
-            <a href="home">Tablettes</a>
-            <a href="home">Téléphones</a>
+            <a href="conformiteTablette">Tablettes</a>
+            <a href="conformiteTelephone">Téléphones</a>
         </div>
     </div>
 </div>
