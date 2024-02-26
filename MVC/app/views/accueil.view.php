@@ -9,14 +9,17 @@
 </head>
 
 <body>
-    <header >
-    <?php include_header(); ?> 
-</header>
     
+   
+    <?php include_header(); ?>  
+    <h1>Page d'accueil SmartTech</h1>
     <?php include_menu();?>
-    <h1>Page d'accueil SmartTech</h1><br>
     <?php include_messageEmployes();?>
 
+
+<form method="post" action="logout">
+                    <button type="submit" class="bouton_normal">Se déconnecter</button>
+</form>
 </body>
 <footer><?php include_footer(); ?></footer>
 </html>

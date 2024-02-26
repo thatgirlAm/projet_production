@@ -16,7 +16,6 @@
     </head>
     <body>
         
-        <?php include_header(); ?>
         <h1>Page de connexion</h1>
 
         <?php 
@@ -26,14 +25,30 @@
         ?>
 
         <form method="post" action="login">
-            <fieldset>
+            <fieldset class="fieldset2">
                 <legend>Se connecter</legend>
+                <div class="div1">
                 <input type="text" placeholder="Addresse Mail" id="addresse_mail" name="addresse_mail">
                 <input type="password" placeholder='Mot de Passe' id='mdp' name="mdp">
                 <button type="submit">Submit</button>
-            </fieldset>
-        </form>
-
+           </div>
+        
+        <div class="identifiantsProf">
+    <div>
+        <br><br><br>
+        Voici vos identifiants manager : 
+        <br>Username : prof@manager.com
+        <br>Password : estiamanager123
+    </div>
+<br>
+    <div>
+        <br><br><br>
+        Voici vos identifiants opérateur : 
+        <br>Username : prof@operateur.com
+        <br>Password : estiaoperateur123
+    </div>
+</div> </fieldset>
+</form>
         <?php include_footer(); ?>
 
     </body>

@@ -11,13 +11,42 @@ function esc($str){
 }
 
 
-
 //--Header--//
 function include_header(){
     ?>
-    <header>
-        <!--<img src="../../../images/logo_smarttech.png" alt="logo" class="logo">-->
-    </header>
+    <div class="header">
+            <img src="assets/images/logo.png" class="logo" alt="logo">
+            
+                <?php if(isset($_SESSION['addresse_mail'])){
+                if(isset($_SESSION['nom'])){
+                    $message =  $_SESSION['nom'];
+                    $id = $_SESSION['id'];
+                    $service = $_SESSION['service'];
+                }}
+                else{
+                    $message = 'Operateur X';
+                }
+                if(isset($_SESSION['service'])==2){
+                    $service = 'Manager';
+                }
+                else{
+                    $service = 'Opérateur';
+                }
+                ?><div class="userInfos">
+                <?php echo "<div class = messageUser>"."<div>".$message."</div><div> Id Employe : ".$id."</div><div> Fonction : ".$service."</div></div>";?>
+            </div>
+            
+            <div class="userInfos">
+                <div class="deconnexion1">
+                <form method="post" action="login">
+                    
+                        <div class="deconnexion2"><a href="login">
+                            <img src="iconedeconnexion.jpg" alt=""></div>
+                            <div class="deconnexion2"><p>Se déconnecter</p></a></div>
+                    </div></div>
+            </form>
+        </div>
+
     <?php
 }
 
@@ -28,14 +57,16 @@ function include_message_accueil(){
     
         if(isset($_SESSION['nom'])){
             $message_accueil = 'Bienvenue ' . $_SESSION['nom'];
-        }
+        }}
         else{
             $message_accueil = 'Bienvenue';
-        }}
+        }
     
     echo $message_accueil;
     
 }
+
+
 
 function redirect($path)
 {
@@ -50,23 +81,19 @@ function include_menu(){
     
     <div class="menu" id="menu">
     <div class="dropdown">
-        <a href="home">
-            <button class = "boutonDropdown">Accueil</button>
-        </a>
+    <button class="boutonDropdown" action=""><a href="home">Accueil</a></button>
     </div>
+       <div class='dropdown'>
+            <button class='boutonDropdown' action=''>Service Planification</button>
+             <div class='dropdown-content'>
+                 <a href='planificationTablette'>Tablettes</a>
+                 <a href='planificationTelephone'>Téléphones</a>
+        </div></div>
     <div class="dropdown">
-    <form method="post" action="home">
-        <button class="home">Service Production</button></form>
+        <button class="boutonDropdown" action="">Service Conformité</button>
         <div class="dropdown-content">
-            <a href="home">Tablettes</a>
-            <a href="home">Téléphones</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="boutonDropdown" action="critere">Service Conformité</button>
-        <div class="dropdown-content">
-            <a href="home">Tablettes</a>
-            <a href="home">Téléphones</a>
+            <a href="conformiteTablette">Tablettes</a>
+            <a href="conformiteTelephone">Téléphones</a>
         </div>
     </div>
 </div>
@@ -76,9 +103,9 @@ function include_menu(){
 
 function include_messageEmployes(){
     ?>
-    <h3>Journal des Employés SmartTech - Focus sur Production & Conformité</h3>
-    <fieldset>
     <h1>Journal des Employés SmartTech</h1>
+    <fieldset>
+        <h3>Journal des Employés SmartTech - Focus sur Production & Conformité</h3>
         <p class="date">Édition Spéciale du 13 Février 2024</p>
         <p>Chers membres des équipes de Production et de Conformité,</p>
         <p>Ce mois-ci, nous voulons mettre en lumière les efforts concertés et les succès de nos équipes de Production et de Conformité. Votre travail acharné et votre dévouement assurent que chaque produit SmartTech non seulement répond aux attentes de nos clients en termes de qualité et d'innovation, mais respecte également toutes les normes réglementaires et les exigences de conformité.</p>
@@ -125,7 +152,7 @@ function include_messageEmployes(){
 function include_footer() {
     ?>
     <footer>
-        Copyrights!<br>©️TAI <a href="mailto:">Contact</a>
+        <p><strong>Projet ESTIA 2025</strong> <br><strong>Copyrights :</strong> Vu que cette entreprise n'existe pas, nous ne vous interdissons pas de tout copier, allez bisous ! </p>©️TAI <a href="mailto:smarttech@tech.fr">Nous écrire</a>
     </footer>
     <?php
 }
