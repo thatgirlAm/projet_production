@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!--A faire : 
+<!--A faire :
  - Mot de passe oublié 
  - logo
  - styles

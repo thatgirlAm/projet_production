@@ -18,7 +18,6 @@
         Bienvenue chez SmartTech, le cœur de l'innovation en matière de téléphones et tablettes. 
         <br>Notre passion nous pousse à créer des appareils qui enrichissent votre quotidien, en alliant technologie de pointe et design élégant.
         <br> Découvrez l'avenir à portée de main avec SmartTech.
-            
         Nous vous présentons ProducTech. 
         <br>ProduTech, la plateforme innovante de gestion de contrôle de production, offre aux opérateurs la possibilité de valider des critères essentiels et aux managers de planifier efficacement les contrôles. 
         <br>Avec l'ajout de la fonctionnalité de création de comptes rendus détaillés sur les contrôles qualité, ProduTech se positionne comme l'outil incontournable pour une gestion transparente et efficace de la qualité dans la production d'appareils. 
@@ -27,21 +26,23 @@
     </p>
 </div>
 <div class="explicationsProf">
-<p>
-    <strong>
-        Groupe H : Almeida-Pinto Joao, Diop Amaëlle, Troufi Chaymae.    
-    </strong>
+    <p>
+     <strong>
+         Groupe H : Almeida-Pinto Joao, Diop Amaëlle, Troufi Chaymae.    
+     </strong>
     
     <br><br><strong>Mot aux professeurs :</strong>  Nous vous avons créé deux comptes : un manager et un opérateur. 
     <br>Notre scénario comporte donc deux Users avec des niveaux d'accès différents.
     <br>Voici le lien de répositoire Github: <a href="https://github.com/thatgirlAm/projet_production">Lien du répositoire Github :</a>
     <br>Nous avons rédigé un Read.me pour mieux expliquer nos choix, vous aurez accès aux différents dossiers et branches. 
     <br><strong>Nous avons référé nos sources dans le Read.me. Nous avons donc fait appe à plusieurs ressources dont des sites de documentation, des cours de code ne ligne ainsi que Chatgpt (accessoirement pour corriger du code).</strong>
-</p></div>  
+    </p>
+</div>  
     <br><br><br>
    
 <p>
-    <br><a href="login"><button type ="button" class="accesProduTech" action="login">Accéder à ProduTech by SmartTech</button></a></p>
+    <br><a href="login">Accéder à ProduTech by SmartTech</a>
+    <button type="button" class="accesProduTech">Accéder à ProduTech by SmartTech</button>
 
 </fieldset>
 

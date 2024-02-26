@@ -41,12 +41,11 @@ function include_header(){
                 <form method="post" action="login">
                     
                         <div class="deconnexion2"><a href="login">
-                            <img src="https://devweb.estia.fr/tai/tai_crocodile/project/MVC/public/assets/images/iconedeconnexion.jpg" alt="" class="icone"></div>
-                            <div class="deconnexion2"><p>Se déconnecter</p></a></div>
+                            <img src="https://devweb.estia.fr/tai/tai_crocodile/project/MVC/public/assets/images/iconedeconnexion.jpg" alt="" class="icone"></a>
+                        </div>
+                            <div class="deconnexion2"><p>Se déconnecter</p></div>
                     </div></div>
-            </form>
-        </div>
-
+                </form>
     <?php
 }
 
