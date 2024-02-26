@@ -1,0 +1,467 @@
+body{
+background-color: #033431;
+color: #f9f9f9;
+font-family: "Montserrat" ;
+}
+h1{
+  text-align: center;
+  margin-top: 50px;
+}
+.listeCriteres{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.critere{
+    margin : 2px;
+}
+legend{
+    font-style: italic;
+    font-size: large;
+}
+
+.switch {
+    position: relative;
+    align-items: center;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+  }
+  
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #d61212;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  
+  input:checked + .slider {
+    background-color: #1bda4b;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 5px #1bda4b;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 13px;
+  }
+  
+  .slider.round:before {
+    border-radius: 60%;
+  }
+
+
+  .bouton_normal {
+    text-align: center;
+    color: #fafafa;
+    text-decoration: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 50%;
+    padding: 60 px;
+}
+
+
+.formulaire{
+  margin: auto;
+}
+
+.commentaire{
+  margin-top: 50px;
+  margin-left: auto;
+}
+
+/*-Menu de navigation-*/
+/*----On s'occupe des bouton dropdown des menus----*/
+
+.dropdown{
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  float: left;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  z-index: 1;
+}
+
+.dropdown-content a:hover{
+  background-color: #AFEEEE;
+  color: #0c0c0c;
+  
+}
+
+.dropdown-content a {
+  float: none;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+  border-radius: inherit;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block flex;
+  flex-direction: column;
+  width: 33%;
+  border-radius: 0 0 8px 8px;
+  background-color: #f9fff9;
+}
+
+.menu{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  background-color: #F1DECD;
+  flex-direction: row;
+  width: 100%;
+  text-decoration: none;
+  color: #0c0c0c;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.menu a{
+  float: left;
+  text-decoration: none;
+  overflow: hidden;
+  float: left;
+  border: none;
+}
+
+.menu > div {
+  width: 33%;
+  height: 50%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.boutonDropdown{
+  width: 100%;
+  padding: 20px;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  text-align: center;
+}
+
+.boutonDropdown:hover{
+  background-color: #d0dfd3ba;
+  color: #0c0c0c;
+  border-radius: inherit;
+}
+
+/*--Gestion des boutons--*/
+
+.bouton_normal {
+  padding: 5px;
+  text-align: center;
+  color: #fafafa;
+  background-color: #0c0c0c;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-left: 50%;
+}
+
+
+/*-Body-*/
+
+.listeCriteresCompteRendu{
+  display: flex;
+  flex-direction: row;
+}
+
+.compartimentTelephone {
+  display :flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#imageTelephone{
+  height: 150px;
+  width: 150 px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+li{
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.enfantTelephone{
+  border-radius: 8px;
+  box-shadow: -3px 2px 10px #0c0c0c;
+  background-color: #A5CDCE;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.parent{
+  background-color: #a1a232b4;
+  border-radius: 8px;
+  border: none;
+
+}
+.buttonFormulaire{
+  text-decoration: none;
+  width: 70%;
+  height: 40px;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-left: 15%;
+  background-color: #F1DECD;
+  border-width: 0.5px;
+  color: #101616;
+  border-radius: 8px;
+  
+  
+}
+.buttonFormulaire:hover, .buttonFormulaire:active, .buttonFormulaire:visited{
+  background-color: #F1DECD;
+  color:#101616;
+}
+.listeTelephonesConformite{
+  margin-top : 100 px;
+  margin-right: auto;
+  width: 90%;
+
+}
+h3{
+  text-align: center;
+  font-style: italic;
+}
+
+.enfantTablette{
+  border-radius: 8px;
+  box-shadow: -3px 2px 10px #0c0c0c;
+  background-color: #69868c;
+  border: none;
+  transition: transform 0.3s ease;
+}
+.enfantTablette:hover{
+  transform: translate(5px, -5px);}
+  .enfantTelephone:hover{
+    transform: translate(5px, -5px);}
+
+#boutonControle{
+  text-decoration: none;
+}
+
+.listeCriteresValides{
+  display: flex;
+  flex-direction: column;
+  width : 100% ;
+}
+#imageTablette{
+  height: 150px;
+  width: 150 px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+.messageUser{
+  text-align: right;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.compartimentTablette{
+  display :flex;
+  flex-direction: row;
+  align-items: center;
+}
+.fieldset_general{
+  margin-top: 30px;
+}
+
+footer{
+  margin-top: 20px;
+  font-style: italic;
+  bottom : 0px;
+}
+
+.messageUser{
+  display: flex;
+  flex-direction: column;
+}
+.titre2{
+  text-align: center;
+}
+
+.logo{
+  border-radius: 50%;
+  width: 100px;
+  margin: 10px;
+  left :0;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  align-content: flex-end;
+}
+
+.userInfos {
+   text-align: center;
+  
+}
+
+.deconnexion1 {
+  display: flex;
+  align-items: center; 
+}
+
+.presentation{
+  text-align: center;
+  margin-top: 20px;
+}
+.fieldset1{
+  margin-top: 50px;
+}
+
+.identifiantsProf{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.accesProduTech{
+  text-decoration: none;
+  border: none;
+  color: #0c0c0c;
+  padding: 15px 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  margin-left: 25%;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color:#F1DECD ;
+}
+
+.accesProduTech:hover {
+  background-color: #a1a232b4;
+  text-decoration: none;
+  color: #F1DECD;
+}
+
+.accesProduTech:visited {
+  background-color: #a1a232b4;
+  text-decoration: none;
+  color: #F1DECD;
+  
+}
+
+.logoDisclaimer{
+  border-radius: 50%;
+  width: 250px;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.fieldset2{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 50px;
+  padding-left: 50px;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.identifiantsProf > div{
+  margin : 0 20px;;
+}
+
+fieldset{
+  background-color: #696a2853;
+  border-radius: 5px;
+}
+
+header{
+  margin-top: 50px;
+}
+
+.deconnexion1{
+  right: 0;
+ 
+}
+
+.deconnexion2{
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.icone{
+  border-radius: 50%;
+  width : 40px;
+}
+.acces{
+  color: #d61212;
+  font-style: italic;
+  text-align: center;
+}
+
+.controle {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0c0c0c;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10001;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+z-index: 1000;}
+
